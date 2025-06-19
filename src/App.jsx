@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { supabase } from "./lib/supabaseClient";
 import { useEffect } from "react";
-import pendingImg from "./assets/pending.svg";
+import pendingImg from "./assets/pending1.png";
+// import pendingImg from "./assets/pending.svg";
 import completedImg from "./assets/completed.svg";
 
 function App() {
@@ -101,7 +102,7 @@ function App() {
             <div className="w-3/4 text-justify">{todo.task}</div>
             <div className="w-1/4 flex justify-between px-2">
               <div
-                className="img my-auto"
+                className="img my-auto duration-1000"
                 onClick={() => changeStatus(todo.task, todo.status)}
               >
                 {todo.status ? (
@@ -113,7 +114,7 @@ function App() {
                 ) : (
                   <img
                     src={pendingImg}
-                    className="w-6 h-6 cursor-pointer"
+                    className="w-6 h-6 cursor-pointer animate-spin duration-[5000ms]"
                     alt="Pending Icon"
                   />
                 )}
