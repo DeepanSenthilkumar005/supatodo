@@ -98,7 +98,7 @@ function App() {
 
       {todoList &&
         todoList.map((todo) => (
-          <div className="p-2 flex w-md bg-slate-200 mx-auto m-2 rounded-md">
+          <div className="p-2 flex max-w-md bg-slate-200 mx-auto m-2 rounded-md">
             <div className="w-3/4 text-justify">{todo.task}</div>
             <div className="w-1/4 flex justify-between px-2">
               <div
